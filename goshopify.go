@@ -69,6 +69,7 @@ type Client struct {
 	ApplicationCharge          ApplicationChargeService
 	Redirect                   RedirectService
 	Page                       PageService
+	Event                      EventService
 	StorefrontAccessToken      StorefrontAccessTokenService
 	Collect                    CollectService
 	Location                   LocationService
@@ -209,6 +210,7 @@ func NewClient(app App, shopName, token string) *Client {
 	c.ApplicationCharge = &ApplicationChargeServiceOp{client: c}
 	c.Redirect = &RedirectServiceOp{client: c}
 	c.Page = &PageServiceOp{client: c}
+	c.Event = &EventServiceOp{client: c}
 	c.StorefrontAccessToken = &StorefrontAccessTokenServiceOp{client: c}
 	c.UsageCharge = &UsageChargeServiceOp{client: c}
 	c.Collect = &CollectServiceOp{client: c}

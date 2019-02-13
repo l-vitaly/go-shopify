@@ -4,19 +4,19 @@ The new home of Conversio's Shopify Go library.
 
 **Note**: The library does not have implementations of all Shopify resources, but it is being used in production and should be stable for usage. PRs for new resources and endpoints are welcome, or you can simply implement some yourself as-you-go. See the section "Using your own models" for more info.
 
-[![Build Status](https://travis-ci.org/bold-commerce/go-shopify.svg?branch=master)](https://travis-ci.org/bold-commerce/go-shopify)
-[![codecov](https://codecov.io/gh/bold-commerce/go-shopify/branch/master/graph/badge.svg)](https://codecov.io/gh/bold-commerce/go-shopify) [![Join the chat at https://gitter.im/bold-commerce/go-shopify](https://badges.gitter.im/bold-commerce/go-shopify.svg)](https://gitter.im/bold-commerce/go-shopify?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://travis-ci.org/l-vitaly/go-shopify.svg?branch=master)](https://travis-ci.org/l-vitaly/go-shopify)
+[![codecov](https://codecov.io/gh/l-vitaly/go-shopify/branch/master/graph/badge.svg)](https://codecov.io/gh/l-vitaly/go-shopify) [![Join the chat at https://gitter.im/l-vitaly/go-shopify](https://badges.gitter.im/l-vitaly/go-shopify.svg)](https://gitter.im/l-vitaly/go-shopify?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## Install
 
 ```console
-$ go get github.com/bold-commerce/go-shopify
+$ go get github.com/l-vitaly/go-shopify
 ```
 
 ## Use
 
 ```go
-import "github.com/bold-commerce/go-shopify"
+import "github.com/l-vitaly/go-shopify"
 ```
 
 This gives you access to the `goshopify` package.
@@ -168,6 +168,7 @@ In order to be sure that a webhook is sent from ShopifyApi you could easily veri
 it with the `VerifyWebhookRequest` method.
 
 For example:
+
 ```go
 func ValidateWebhook(httpRequest *http.Request) (bool) {
     shopifyApp := goshopify.App{ApiSecret: "ratz"}
