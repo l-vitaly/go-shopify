@@ -6,7 +6,6 @@ import (
 )
 
 const eventBasePath = "admin/events"
-const eventsResourceName = "events"
 
 // EventService is an interface for interacting with the events
 // endpoints of the Shopify API.
@@ -44,6 +43,8 @@ type EventsResource struct {
 	Events []Event `json:"events"`
 }
 
+// EventListOptions A struct for all available order list options.
+// See: https://help.shopify.com/en/api/reference/events/event#index
 type EventListOptions struct {
 	Limit        int       `json:"limit,omitempty"`
 	Page         int       `json:"page,omitempty"`
@@ -55,7 +56,7 @@ type EventListOptions struct {
 	Fields       string    `json:"fields,omitempty"`
 }
 
-// List pages
+// List events
 func (s *EventServiceOp) List(options interface{}) ([]Event, error) {
 	path := fmt.Sprintf("%s.json", eventBasePath)
 	resource := new(EventsResource)
